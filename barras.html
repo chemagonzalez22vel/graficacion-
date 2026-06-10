@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grafico de barras</title>
+    <link rel="stylesheet" href="./style/index.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <h1>Graficacion</h1>
+        <p>Proyecto de barras en canvas</p>
+      </header>
+
+      <section class="workspace">
+        <div class="panel">
+          <h2>Panel de control</h2>
+          <label for="data-input">Entrada de parametros</label>
+          <textarea id="data-input" rows="6" placeholder="Ejemplo&#10;20,50,10,40,25"></textarea>
+
+          <div class="button-row">
+            <button id="draw-button" type="button">Dibujar</button>
+            <button id="example-button" type="button" class="button-soft">Ejemplo</button>
+          </div>
+
+          <p id="error-text" class="error-text"></p>
+
+          <div class="info-box">
+            <p><strong>Formato:</strong> valores separados por comas o nombre,valor por linea</p>
+            <p id="status-text"></p>
+          </div>
+
+          <div class="help-box">
+            <h3>Datos de prueba</h3>
+            <ul>
+              <li><code>20,50,10,40,25</code></li>
+              <li><code>Enero,20</code></li>
+              <li><code>Febrero,50</code></li>
+              <li><code>Marzo,10</code></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="canvas-card">
+          <div class="canvas-header">
+            <h2>Canvas de visualizacion</h2>
+            <p>Area de dibujo disponible</p>
+          </div>
+          <div class="chart">
+            <canvas id="circlechart" width="900" height="520"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./dist/src/index.js" type="module"></script>
+  </body>
+</html>
