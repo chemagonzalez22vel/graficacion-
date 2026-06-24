@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visor 3D de puerta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/index.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Graficación</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Abrir</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vizualizar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Expand</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <div class="card text-center">
+        <div class="card-header">
+          Canvas de vizualizaion
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Modelo 3D de puerta</h5>
+          <p class="card-text">La puerta se carga desde un archivo txt y puede abrirse o cerrarse.</p>
+
+          <div class="controls">
+            <input type="file" id="file-input" accept=".txt,.dat" />
+            <button id="open-door" type="button" class="btn btn-primary">Abrir puerta</button>
+            <button id="close-door" type="button" class="btn btn-secondary">Cerrar puerta</button>
+            <button id="animate-door" type="button" class="btn btn-secondary">Animar puerta</button>
+            <button id="reset-view" type="button" class="btn btn-secondary">Reset vista</button>
+          </div>
+
+          <div class="controls">
+            <button id="eyeDown" type="button" class="btn btn-outline-primary">Abajo</button>
+            <button id="eyeUp" type="button" class="btn btn-outline-primary">Arriba</button>
+            <button id="eyeLeft" type="button" class="btn btn-outline-primary">Izquierda</button>
+            <button id="eyeRight" type="button" class="btn btn-outline-primary">Derecha</button>
+            <button id="incrDist" type="button" class="btn btn-outline-primary">Alejar</button>
+            <button id="decrDist" type="button" class="btn btn-outline-primary">Acercar</button>
+          </div>
+        </div>
+
+        <div class="chart card-img-bottom">
+          <canvas id="circlechart" width="900" height="520"></canvas>
+        </div>
+
+        <div class="card-footer text-muted">
+          <p id="status-text" class="mb-0">Cargando puerta...</p>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          Contenido del archivo
+        </div>
+        <div class="card-body">
+          <pre id="contenido-archivo"></pre>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="pb-4 pt-4">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12 col-lg">
+            <a href="https://github.com/jorrgeCruz/graphics">Repositorio Principal</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Proyecto Final</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Graficación</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="./dist/src/index.js?v=20260623-puerta" type="module"></script>
+  </body>
+</html>

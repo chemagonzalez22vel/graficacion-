@@ -1,0 +1,49 @@
+body{
+  background: #f3f5f7;
+}
+
+.card{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.controls{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chart{
+  padding: 18px;
+}
+
+canvas{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #d9d9d9;
+}
+
+pre{
+  min-height: 180px;
+  max-height: 260px;
+  margin: 0;
+  padding: 12px;
+  overflow: auto;
+  background: #f8f9fa;
+  border: 1px solid #d9d9d9;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+#footer{
+  background: linear-gradient(0deg,#1c3643,#273b47 25%,#1e5372);
+}
+
+#footer a{
+  color: #FFFFFF;
+}
