@@ -1,2 +1,2 @@
-# graficacion
-tareas 
+# graficacion. 
+tareas.     
